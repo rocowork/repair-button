@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浮動報修按鈕</title>
+  <style>
+    /* 移除預設邊距、背景透明，方便嵌入 Google Sites */
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    /* 浮動按鈕樣式 */
+    .floating-btn {
+      position: fixed;
+      bottom: 200px;
+      right: 50px;
+      width: 70px;
+      height: 70px;
+      background-color: #007bff;
+      color: white;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      font-size: 16px;
+      text-align: center;
+      line-height: 1.2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 9999;
+    }
+
+    .floating-btn:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+
+    /* 手機版縮小 */
+    @media (max-width: 768px) {
+      .floating-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 14px;
+        bottom: 100px;
+        right: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- 浮動報修按鈕 -->
+  <a href="https://example.com/repair" target="_blank" class="floating-btn">
+    我要<br>報修
+  </a>
+</body>
+</html>
